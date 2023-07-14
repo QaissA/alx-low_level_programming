@@ -1,19 +1,21 @@
 #include <stdio.h>
 /**
- * main - entry point
+ * main - Entry point
  *
- * Return: Always 0 (success)
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-int digit;
-for (digit = 0; digit < 10; digit++)
+int a = 0;
+while (a < 10)
 {
-putchar(digit + '0');
+putchar(a + '0');
+a++;
 }
-for (digit = 0; digit < 6; digit++) 
+while (a < 16)
 {
-putchar(digit + 'a');
+putchar((a - 10) + 'a');
+a++;
 }
 putchar('\n');
 return (0);
