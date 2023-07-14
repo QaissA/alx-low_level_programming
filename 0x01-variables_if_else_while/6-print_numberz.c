@@ -4,7 +4,7 @@
  *
  * Return: Always 0 (success)
  */
-int void(main)
+int main(void)
 {
 int number = 0;
 while (number <= 9)
