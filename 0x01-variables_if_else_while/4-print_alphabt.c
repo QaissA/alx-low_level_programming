@@ -1,15 +1,15 @@
 #include <stdio.h>
 /**
- * Main - Entry point
+ * main - Entry point
  *
- * Return : Always 0 (success)
+ * return : Always 0 (success)
  */
 int main(void)
 {
-char letter='a';
+char letter = 'a';
 while (letter <= 'z')
 {
-if (letter !='q' && letter !='e')
+if (letter != 'q' && letter != 'e')
 {
 putchar(letter);
 }
