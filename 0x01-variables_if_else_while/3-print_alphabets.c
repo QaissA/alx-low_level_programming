@@ -4,18 +4,18 @@
  *
  * Return: Always 0 (Success)
  */
-int main(void) {
-char letter = 'a';
-while (letter <= 'z') 
+
+int main(void)
 {
-putchar(letter);
-letter++;
+char a;
+char A;
+for (a = 'a' ; a <= 'z' ; a++)
+{
+putchar(a);
 }
-letter = 'A';
-while (letter <= 'Z') 
+for (A = 'A' ; A <= 'Z' ; A++)
 {
-putchar(letter);
-letter++
+putchar(A);
 }
 putchar('\n');
 return (0);
