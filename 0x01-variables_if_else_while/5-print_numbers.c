@@ -12,6 +12,6 @@ while (digit <= 9)
 putchar('0'+ digit);
 digit++;
 }
-puthcar('\n');
+putchar('\n');
 return (0);
 }
