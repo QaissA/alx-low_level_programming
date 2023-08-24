@@ -7,13 +7,17 @@ section .text
     extern printf
 
 main:
-    ; Call printf with the format string and the address of the hello string
-    mov rdi, format
-    mov rsi, hello
-    xor rax, rax ; Clear RAX register (return value of printf)
-    call printf
+    sub rsp, 8              ; Align the stack
 
-    ; Exit the program
-    xor rdi, rdi ; Exit code 0
-    mov rax, 60  ; syscall number for exit
+    mov rdi, format         ; Set format string as first argument
+    mov rsi, hello          ; Set hello string as second argument
+    xor rax, rax            ; Clear RAX register (return value of printf)
+    call printf             ; Call the printf function
+
+    add rsp, 8              ; Restore the stack
+    xor rdi, rdi            ; Set exit code to 0
+    mov rax, 60             ; syscall number for exit
     syscall
+
+section .bss
+    resb 8                  ; Reserved space for stack alignment
