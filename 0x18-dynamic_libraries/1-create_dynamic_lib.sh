@@ -1,6 +1,3 @@
 #!/bin/bash
-for file in *.c; do
-	gcc -c -fPIC "$file"
-done
-
+gcc -fPIC -c *.c
 gcc -shared -o liball.so *.o
